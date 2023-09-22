@@ -14,31 +14,31 @@ let resultado = document.getElementById('res')
             genero = ''
             let img = document.createElement('img')
             img.setAttribute('id','foto')
-            if (sex[0].checked){
-                genero = 'Homem'
-                if (idade <= 5 ){
-                    // bebe
-                    img.setAttribute = 'src','imagens/bebemenino.jpg'
-                }
-                else if (idade > 5 && idade <= 10){
-                    // criança
-                }
-                else if (idade > 10 && idade <= 15){
-                    // adolesente
-                }
-                else if (idade > 15 && idade <= 25 ){
-                    // homem
-                } else if (idade > 25 && idade <= 50 ){
-                    // velho
-                }
-                else{
-                    // idoso
-                }
-                    
+                if (sex[0].checked){
+                    genero = 'Homem'
+                    if (idade <= 5 ){
+                        // bebe
+                        img.setAttribute = 'src','imagens/bebemenino.jpg'
+                    }
+                    else if (idade > 5 && idade <= 10){
+                        // criança
+                    }
+                    else if (idade > 10 && idade <= 15){
+                        // adolesente
+                    }
+                    else if (idade > 15 && idade <= 25 ){
+                        // homem
+                    }else if (idade > 25 && idade <= 50 ){
+                        // velho
+                    }
+                    else{
+                        // idoso
+                    }
+                        
 
-            }else if (sex[1].checked){
-                genero = 'Mulher'
-            }
+                }else if (sex[1].checked){
+                    genero = 'Mulher'
+                }
             resultado.innerHTML = `temos ${genero} com ${idade} anos`
             resultado.appendChild(img)
         }
