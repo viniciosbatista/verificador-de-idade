@@ -16,30 +16,54 @@ let resultado = document.getElementById('res')
             img.setAttribute('id','foto')
                 if (sex[0].checked){
                     genero = 'Homem'
-                    if (idade <= 5 ){
+                    if (idade < 5 ){
                         // bebe
-                        img.setAttribute = 'src','imagens/bebemenino.jpg'
+                        img.setAttribute('src','imagens/bebemenino.jpg')
                     }
-                    else if (idade > 5 && idade <= 10){
+                    else if (idade <= 10){
                         // criança
+                        img.setAttribute('src','imagens/menino.jpg')
                     }
-                    else if (idade > 10 && idade <= 15){
+                    else if (idade <= 15){
                         // adolesente
+                        img.setAttribute('src','imagens/rapaz.jpg')
                     }
-                    else if (idade > 15 && idade <= 25 ){
+                    else if (idade <= 25 ){
                         // homem
-                    }else if (idade > 25 && idade <= 50 ){
+                        img.setAttribute('src','imagens/homem.jpg')
+                    }else if (idade <= 50 ){
                         // velho
+                        img.setAttribute('src','imagens/velho.jpg')
                     }
                     else{
                         // idoso
+                        img.setAttribute('src','imagens/idoso.jpg')
                     }
                         
 
                 }else if (sex[1].checked){
                     genero = 'Mulher'
+                    if (idade < 5){
+                        // bebe
+                        img.setAttribute('src','imagens/bebemenina.jpg')
+                    }else if (idade <= 10){
+                        // menina
+                        img.setAttribute('src','imagens/menina.jpg')
+                    }else if (idade <= 15){
+                        // moça
+                        img.setAttribute('src','imagens/moça.jpg')
+                    }else if (idade <= 25){
+                        // mulher
+                        img.setAttribute('src','imagens/mulher.jpg')
+                    }else if (idade <= 50){
+                        // velha
+                        img.setAttribute('src','imagens/velha.jpg')
+                    }else{
+                        // idoso
+                        img.setAttribute('src','imagens/idosa.jpg')
+                    }
                 }
-            resultado.innerHTML = `temos ${genero} com ${idade} anos`
+            resultado.innerHTML = `${genero} com ${idade} anos`
             resultado.appendChild(img)
         }
         
